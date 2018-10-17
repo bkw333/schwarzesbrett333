@@ -1,0 +1,7 @@
+**/packages
+**/schwarzesbrett333/Api/Api/Api/bin
+**/schwarzesbrett333/Api/Api/Api/obj
+**/TestResults
+**/schwarzesbrett333/Api/Api/.vs
+**/src/web/out
+**/internal-nlog.txt
