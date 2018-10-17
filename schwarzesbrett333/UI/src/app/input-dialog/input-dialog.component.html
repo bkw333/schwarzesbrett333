@@ -1,4 +1,19 @@
-<p></p>
+<p>Type in your message you wanna leave</p>
 
-<input>
-<button mat-button>Post it</button>
+
+<!-- <form class="form">
+    <mat-form-field class="full-width">
+        <input matInput #username placeholder="Username">
+    </mat-form-field>
+    
+
+    <mat-form-field class="full-width">
+        <input matInput #message placeholder="Message">
+    </mat-form-field>
+</form> -->
+
+<input class="username-input" #username placeholder="Username">
+<input class="message-input" #message placeholder="Message">
+
+
+<button mat-button (click)="clickedPost(username.value, message.value)">Post it</button> 

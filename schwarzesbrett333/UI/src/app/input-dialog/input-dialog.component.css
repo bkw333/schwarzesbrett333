@@ -1,0 +1,20 @@
+.form {
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+    background-color: white!important;
+    color: black;
+}
+
+.full-width {
+    width: 100%;
+  }
+
+
+.message-input{
+    min-width: 500;
+}
+
+.username-input{
+    min-width: 250;
+}

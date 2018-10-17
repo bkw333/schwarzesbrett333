@@ -14,7 +14,18 @@ namespace Api
        
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddCors();
+            services.AddCors(options =>
+            {
+                options.AddPolicy("AllowAll",
+                    builder =>
+                    {
+                        builder
+                            .AllowAnyOrigin()
+                            .AllowAnyMethod()
+                            .AllowAnyHeader()
+                            .AllowCredentials();
+                    });
+            });
             services.AddMvc();
 
         }
@@ -22,7 +33,7 @@ namespace Api
        
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
-            app.UseCors();
+            app.UseCors("AllowAll");
             app.UseMvc();
 
         }

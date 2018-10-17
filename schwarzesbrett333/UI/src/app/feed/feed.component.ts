@@ -1,3 +1,4 @@
+import { MessageService } from './../services/messages.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,10 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FeedComponent implements OnInit {
 
-  constructor() { }
+  constructor(private messageService: MessageService ) {}
 
+  messages: Array<any>;
   ngOnInit() {
-    
+    this.messageService.get().subscribe(data => {
+        this.messages = data,
+        console.log(data);
+      });
   }
 
 }

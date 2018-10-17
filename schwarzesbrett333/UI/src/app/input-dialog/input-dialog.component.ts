@@ -1,4 +1,7 @@
+import { Post } from './../services/post';
 import { Component, OnInit } from '@angular/core';
+import { MessageService } from '../services/messages.service';
+
 
 @Component({
   selector: 'app-input-dialog',
@@ -7,9 +10,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class InputDialogComponent implements OnInit {
 
-  constructor() { }
 
-  ngOnInit() {
+  constructor(private messageService: MessageService) { }
+
+  ngOnInit() { }
+
+  clickedPost(username: string, message: string): void {
+    const post = new Post;
+    post.Username = username;
+    post.Message = message;
+    this.messageService.post(post)
+      .subscribe(response => console.log(response));
   }
 
 }
