@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import { Post } from './post';
 
 
 @Injectable({
@@ -9,9 +10,9 @@ import { Observable } from 'rxjs';
 export class MessageService {
   constructor(private client: HttpClient) { }
 
-    public get(): Observable<any> {
+    public get(): any {
       const url = 'https://localhost:5001/messages/';
-      return this.client.get<Array<any>>(url);
+      return this.client.get<Array<Post>>(url);
    }
 
    public post(post: any): Observable<any> {

@@ -1,5 +1,6 @@
 import { Post } from './../services/post';
 import { Component, OnInit } from '@angular/core';
+
 import { MessageService } from '../services/messages.service';
 
 
@@ -17,10 +18,10 @@ export class InputDialogComponent implements OnInit {
 
   clickedPost(username: string, message: string): void {
     const post = new Post;
-    post.Username = username;
-    post.Message = message;
+    post.username = username;
+    post.message = message;
     this.messageService.post(post)
-      .subscribe(response => console.log(response));
+      .subscribe(response => console.log());
   }
 
 }
