@@ -2,25 +2,37 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Api.controllers;
 using Api.Hubs;
+using Autofac;
+using Autofac.Extensions.DependencyInjection;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace Api
 {
     public class Startup
     {
-       
-        public void ConfigureServices(IServiceCollection services)
+
+        public IConfigurationRoot Configuration { get; set; }
+
+        public IServiceProvider ConfigureServices(IServiceCollection services)
         {
+            var builder = new ConfigurationBuilder()
+                .AddJsonFile("appsettings.json");
+            
+            Configuration = builder.Build();
             services.AddCors(options =>
             {
                 options.AddPolicy("AllowAll",
-                    builder =>
+                    builderCors =>
                     {
-                        builder
+                        builderCors
                             .AllowAnyOrigin()
                             .AllowAnyMethod()
                             .AllowAnyHeader()
@@ -28,7 +40,15 @@ namespace Api
                     });
             });
             services.AddSignalR();
-            services.AddMvc();
+            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+            services.AddDbContext<FeedPostsDbContext>
+                (option => option.UseSqlServer(Configuration["database:connection"]));
+
+            var cbuilder = new ContainerBuilder();
+            cbuilder.RegisterType<FeedPostDataRepository>().As<IFeedPostDataRepository>();
+            cbuilder.Populate(services);
+            return new AutofacServiceProvider(cbuilder.Build());
+
 
         }
 

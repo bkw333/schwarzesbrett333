@@ -9,6 +9,6 @@ namespace Api
     {
         public string Username { get; set; }
         public string Message { get; set; }
-
+        public int Id { get; set; }
     }
 }

@@ -1,11 +1,8 @@
 ﻿using System;
-using System.ComponentModel;
-using System.Net.Mail;
 using System.Threading.Tasks;
 using Api.Hubs;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.SignalR;
-using Newtonsoft.Json.Linq;
 
 namespace Api.controllers
 {
@@ -13,35 +10,25 @@ namespace Api.controllers
     public class MessagesController : Controller
     {
         private readonly IHubContext<MessageHub> _messageHubContext;
+        private readonly IFeedPostDataRepository _repository;
         private readonly MessageHub _messageHub = new MessageHub();
 
-        public MessagesController(IHubContext<MessageHub> messageHubContext)
+        public MessagesController(
+            IHubContext<MessageHub> messageHubContext,
+            IFeedPostDataRepository repository
+            )
         {
             _messageHubContext = messageHubContext;
+            _repository = repository;
         }
 
         [HttpGet]
         [Route("/messages")]
-        public async Task<IActionResult> Get()
+        public async Task<IActionResult> GetAll()
         {
-            return Ok(new[]
-            {
-                new Post
-                {
-                    Username = "Peter",
-                    Message = "Das ist eine Testnachricht!"
-                },
-                new Post
-                {
-                    Username = "Ralf",
-                    Message = "Das ist eine zweite Testnachricht!"
-                },
-                new Post
-                {
-                    Username = "Anton",
-                    Message = "Wow! Knorke WG!"
-                }
-            });
+            var posts = await _repository.GetAll();
+            return Ok(posts);
+
         }
 
         [HttpPost]
@@ -54,19 +41,20 @@ namespace Api.controllers
                 Message = post.Message
             };
 
+            await _repository.Add(sentMessage);
+            
             try
             {
-                //await _messageHub.Send(sentMessage);
-
                 await _messageHubContext.Clients.All.SendAsync("Send", sentMessage);
             }
             catch (Exception e)
             {
-
                 Console.Write(e.ToString());
             }
 
             return Ok();
         }
+
+       
     }
 }
