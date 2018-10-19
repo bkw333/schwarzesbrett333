@@ -38,7 +38,8 @@ namespace Api.controllers
             var sentMessage = new Post
             {
                 Username = post.Username,
-                Message = post.Message
+                Message = post.Message,
+                Datum = DateTime.Now
             };
 
             await _repository.Add(sentMessage);

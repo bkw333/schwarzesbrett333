@@ -1,19 +1,16 @@
-<p>Type in your message you wanna leave</p>
+<div class="input-div">
+    <mat-toolbar>Leave a comment
+        <button mat-button color="accent" (click)="clickedPost(username.value, message.value)">Post it</button>
+    </mat-toolbar>
 
-
-<!-- <form class="form">
-    <mat-form-field class="full-width">
-        <input matInput #username placeholder="Username">
-    </mat-form-field>
+    <form>
+        <mat-form-field class="username-input">
+            <input matInput #username placeholder="Username">
+        </mat-form-field>
+        <mat-form-field class="message-input">
+            <input matInput #message placeholder="Message">
+        </mat-form-field>
+    </form>
+  
     
-
-    <mat-form-field class="full-width">
-        <input matInput #message placeholder="Message">
-    </mat-form-field>
-</form> -->
-
-<input class="username-input" #username placeholder="Username">
-<input class="message-input" #message placeholder="Message">
-
-
-<button mat-button (click)="clickedPost(username.value, message.value)">Post it</button> 
+</div>

@@ -1,7 +1,9 @@
-<div>
-  <p>Feed</p>
+<div class="feed-toolbar">
+  <mat-toolbar>FEED</mat-toolbar>
+</div>
+<div class="feed-div">
   <div *ngFor="let message of messages">
-    <mat-card>
+    <mat-card class="card">
       <mat-card-subtitle>{{message.username}}</mat-card-subtitle>
       {{message.message}}
     </mat-card>

@@ -6,7 +6,7 @@ import { Post } from '../services/post';
 @Component({
   selector: 'app-feed',
   templateUrl: './feed.component.html',
-  styleUrls: ['./feed.component.css']
+  styleUrls: ['./feed.component.scss']
 })
 export class FeedComponent implements OnInit {
   canSendMessage: boolean;
