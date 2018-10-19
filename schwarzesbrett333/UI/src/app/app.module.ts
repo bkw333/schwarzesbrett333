@@ -2,7 +2,7 @@ import { SignalRService } from './services/signalR.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
-import { MatButtonModule, MatCardModule, MatInputModule, MatToolbarModule, MatChipsModule } from '@angular/material';
+import { MatButtonModule, MatCardModule, MatInputModule, MatToolbarModule, MatChipsModule, MatSnackBarModule } from '@angular/material';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
@@ -26,7 +26,8 @@ import { InputDialogComponent } from './input-dialog/input-dialog.component';
     HttpClientModule,
     MatInputModule,
     MatToolbarModule,
-    MatChipsModule
+    MatChipsModule,
+    MatSnackBarModule
   ],
   providers: [ SignalRService ],
   bootstrap: [AppComponent]

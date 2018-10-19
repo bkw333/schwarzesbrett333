@@ -4,7 +4,7 @@
 <div class="feed-div">
   <div *ngFor="let message of messages">
     <mat-card class="card">
-      <mat-card-subtitle>{{message.username}}</mat-card-subtitle>
+      <mat-card-subtitle>{{message.username}}  <small>{{message.datum | date: 'HH:mm:ss - dd.MM.yyyy '}}</small></mat-card-subtitle>
       {{message.message}}
     </mat-card>
   </div>

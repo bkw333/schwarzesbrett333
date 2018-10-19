@@ -1,9 +1,9 @@
 <div class="input-div">
-    <mat-toolbar>Leave a comment
+    <mat-toolbar>Leave a comment 
         <button mat-button color="accent" (click)="clickedPost(username.value, message.value)">Post it</button>
     </mat-toolbar>
 
-    <form>
+    <form class="input-container">
         <mat-form-field class="username-input">
             <input matInput #username placeholder="Username">
         </mat-form-field>
@@ -11,6 +11,4 @@
             <input matInput #message placeholder="Message">
         </mat-form-field>
     </form>
-  
-    
 </div>
