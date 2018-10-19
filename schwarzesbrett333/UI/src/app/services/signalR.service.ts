@@ -19,7 +19,7 @@ export class SignalRService {
 
     private createConnection() {
         this.hubConnection = new HubConnectionBuilder()
-            .withUrl('https://localhost:5001/messageHub')
+            .withUrl('https://schwarzesbrett.azurewebsites.net/messageHub')
             .build();
     }
 
