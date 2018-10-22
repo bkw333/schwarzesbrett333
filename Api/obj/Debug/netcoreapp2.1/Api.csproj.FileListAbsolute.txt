@@ -1,0 +1,45 @@
+C:\Users\nnj6\Desktop\SchwarzesBrett\Api\Api\Api\obj\Debug\netcoreapp2.1\Api.csprojAssemblyReference.cache
+C:\Users\nnj6\Desktop\SchwarzesBrett\Api\Api\Api\obj\Debug\netcoreapp2.1\Api.csproj.CoreCompileInputs.cache
+C:\Users\nnj6\Desktop\SchwarzesBrett\Api\Api\Api\obj\Debug\netcoreapp2.1\Api.RazorAssemblyInfo.cache
+C:\Users\nnj6\Desktop\SchwarzesBrett\Api\Api\Api\obj\Debug\netcoreapp2.1\Api.RazorAssemblyInfo.cs
+C:\Users\nnj6\Desktop\SchwarzesBrett\Api\Api\Api\obj\Debug\netcoreapp2.1\Api.AssemblyInfoInputs.cache
+C:\Users\nnj6\Desktop\SchwarzesBrett\Api\Api\Api\obj\Debug\netcoreapp2.1\Api.AssemblyInfo.cs
+C:\Users\nnj6\Desktop\SchwarzesBrett\Api\Api\Api\bin\Debug\netcoreapp2.1\Api.deps.json
+C:\Users\nnj6\Desktop\SchwarzesBrett\Api\Api\Api\bin\Debug\netcoreapp2.1\Api.runtimeconfig.json
+C:\Users\nnj6\Desktop\SchwarzesBrett\Api\Api\Api\bin\Debug\netcoreapp2.1\Api.runtimeconfig.dev.json
+C:\Users\nnj6\Desktop\SchwarzesBrett\Api\Api\Api\bin\Debug\netcoreapp2.1\Api.dll
+C:\Users\nnj6\Desktop\SchwarzesBrett\Api\Api\Api\bin\Debug\netcoreapp2.1\Api.pdb
+C:\Users\nnj6\Desktop\SchwarzesBrett\Api\Api\Api\obj\Debug\netcoreapp2.1\Api.RazorTargetAssemblyInfo.cache
+C:\Users\nnj6\Desktop\SchwarzesBrett\Api\Api\Api\obj\Debug\netcoreapp2.1\Api.dll
+C:\Users\nnj6\Desktop\SchwarzesBrett\Api\Api\Api\obj\Debug\netcoreapp2.1\Api.pdb
+C:\Users\nnj6\Desktop\git schwarzesbrett\schwarzesbrett333\Api\Api\Api\bin\Debug\netcoreapp2.1\Api.deps.json
+C:\Users\nnj6\Desktop\git schwarzesbrett\schwarzesbrett333\Api\Api\Api\bin\Debug\netcoreapp2.1\Api.runtimeconfig.json
+C:\Users\nnj6\Desktop\git schwarzesbrett\schwarzesbrett333\Api\Api\Api\bin\Debug\netcoreapp2.1\Api.runtimeconfig.dev.json
+C:\Users\nnj6\Desktop\git schwarzesbrett\schwarzesbrett333\Api\Api\Api\bin\Debug\netcoreapp2.1\Api.dll
+C:\Users\nnj6\Desktop\git schwarzesbrett\schwarzesbrett333\Api\Api\Api\bin\Debug\netcoreapp2.1\Api.pdb
+C:\Users\nnj6\Desktop\git schwarzesbrett\schwarzesbrett333\Api\Api\Api\obj\Debug\netcoreapp2.1\Api.csprojAssemblyReference.cache
+C:\Users\nnj6\Desktop\git schwarzesbrett\schwarzesbrett333\Api\Api\Api\obj\Debug\netcoreapp2.1\Api.csproj.CoreCompileInputs.cache
+C:\Users\nnj6\Desktop\git schwarzesbrett\schwarzesbrett333\Api\Api\Api\obj\Debug\netcoreapp2.1\Api.RazorAssemblyInfo.cache
+C:\Users\nnj6\Desktop\git schwarzesbrett\schwarzesbrett333\Api\Api\Api\obj\Debug\netcoreapp2.1\Api.RazorAssemblyInfo.cs
+C:\Users\nnj6\Desktop\git schwarzesbrett\schwarzesbrett333\Api\Api\Api\obj\Debug\netcoreapp2.1\Api.AssemblyInfoInputs.cache
+C:\Users\nnj6\Desktop\git schwarzesbrett\schwarzesbrett333\Api\Api\Api\obj\Debug\netcoreapp2.1\Api.AssemblyInfo.cs
+C:\Users\nnj6\Desktop\git schwarzesbrett\schwarzesbrett333\Api\Api\Api\obj\Debug\netcoreapp2.1\Api.RazorTargetAssemblyInfo.cache
+C:\Users\nnj6\Desktop\git schwarzesbrett\schwarzesbrett333\Api\Api\Api\obj\Debug\netcoreapp2.1\Api.dll
+C:\Users\nnj6\Desktop\git schwarzesbrett\schwarzesbrett333\Api\Api\Api\obj\Debug\netcoreapp2.1\Api.pdb
+C:\Users\nnj6\Desktop\git schwarzesbrett\schwarzesbrett333\Api\Api\Api\bin\Debug\netcoreapp2.1\AppSettings.json
+C:\Users\nnj6\Desktop\Api\Api\obj\Debug\netcoreapp2.1\Api.csprojAssemblyReference.cache
+C:\Users\nnj6\Desktop\Api\Api\obj\Debug\netcoreapp2.1\Api.csproj.CoreCompileInputs.cache
+C:\Users\nnj6\Desktop\Api\Api\obj\Debug\netcoreapp2.1\Api.RazorAssemblyInfo.cache
+C:\Users\nnj6\Desktop\Api\Api\obj\Debug\netcoreapp2.1\Api.RazorAssemblyInfo.cs
+C:\Users\nnj6\Desktop\Api\Api\obj\Debug\netcoreapp2.1\UserSecretsAssemblyInfo.cs
+C:\Users\nnj6\Desktop\Api\Api\obj\Debug\netcoreapp2.1\Api.AssemblyInfoInputs.cache
+C:\Users\nnj6\Desktop\Api\Api\obj\Debug\netcoreapp2.1\Api.AssemblyInfo.cs
+C:\Users\nnj6\Desktop\Api\Api\obj\Debug\netcoreapp2.1\Api.dll
+C:\Users\nnj6\Desktop\Api\Api\obj\Debug\netcoreapp2.1\Api.pdb
+C:\Users\nnj6\Desktop\Api\Api\bin\Debug\netcoreapp2.1\AppSettings.json
+C:\Users\nnj6\Desktop\Api\Api\bin\Debug\netcoreapp2.1\Api.deps.json
+C:\Users\nnj6\Desktop\Api\Api\bin\Debug\netcoreapp2.1\Api.runtimeconfig.json
+C:\Users\nnj6\Desktop\Api\Api\bin\Debug\netcoreapp2.1\Api.runtimeconfig.dev.json
+C:\Users\nnj6\Desktop\Api\Api\bin\Debug\netcoreapp2.1\Api.dll
+C:\Users\nnj6\Desktop\Api\Api\bin\Debug\netcoreapp2.1\Api.pdb
+C:\Users\nnj6\Desktop\Api\Api\obj\Debug\netcoreapp2.1\Api.RazorTargetAssemblyInfo.cache
