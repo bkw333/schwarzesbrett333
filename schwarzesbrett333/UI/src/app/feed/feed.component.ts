@@ -37,8 +37,8 @@ export class FeedComponent implements OnInit {
     this.signalRService.postReceived.subscribe((post: Post) => {
       this.ngZone.run(() => {
         this.currentPost = new Post();
-        this.messages.push(
-          new Post(post.username, post.message)
+        this.messages.unshift(
+          new Post(post.username, post.message, post.datum)
         );
       });
     });
