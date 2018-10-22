@@ -10,21 +10,25 @@ import { MatSnackBar } from '@angular/material';
   styleUrls: ['./input-dialog.component.scss']
 })
 export class InputDialogComponent implements OnInit {
-
+  message: string;
+  username: string;
 
   constructor(private messageService: MessageService, public snackBar: MatSnackBar) { }
 
   ngOnInit() { }
 
-  clickedPost(username: string, message: string): void {
-    const post = new Post;
-    post.username = username;
-    post.message = message;
+  clickedPost(): void {
+    if (this.username && this.message) {
+      const post = new Post;
+      post.username = this.username;
+      post.message = this.message;
 
-    if (username !== '' && message !== '') {
+      console.log('sent to messagesservice');
       this.messageService.post(post)
-        .subscribe(response => console.log());
-        
+        .subscribe(() => {
+          this.message = '';
+        });
+
     } else {
       this.snackBar.open('Felder <Username> und <Message> dürfen nicht leer sein!', 'Dammit!', {
         duration: 4000,

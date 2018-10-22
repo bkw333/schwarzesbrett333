@@ -1,14 +1,14 @@
 <div class="input-div">
     <mat-toolbar>Leave a comment 
-        <button mat-button color="accent" (click)="clickedPost(username.value, message.value)">Post it</button>
+        <button mat-button color="accent" (click)="clickedPost()">Post it</button>
     </mat-toolbar>
 
-    <form class="input-container">
+    <div class="input-container">
         <mat-form-field class="username-input">
-            <input matInput #username placeholder="Username">
+            <input matInput [(ngModel)]="username" (keyup.enter)="clickedPost()" name="username" placeholder="Username">
         </mat-form-field>
         <mat-form-field class="message-input">
-            <input matInput #message placeholder="Message">
+            <input matInput [(ngModel)]="message" (keyup.enter)="clickedPost()" name="username" placeholder="Message">
         </mat-form-field>
-    </form>
+    </div>
 </div>

@@ -22,6 +22,7 @@ export class MessageService {
       duration: 4000,
       panelClass: ['snackbar-success']
     });
+    console.log('sent to api');
     return this.client.post(url, post);
    }
 }

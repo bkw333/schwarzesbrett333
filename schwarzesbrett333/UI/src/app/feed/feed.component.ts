@@ -22,11 +22,7 @@ export class FeedComponent implements OnInit {
   ngOnInit() {
     this.messageService.get()
       .subscribe(data => {
-        this.messages = data,
-          console.log(data);
-        this.messages.forEach(message => {
-          console.log(message.username, message.message);
-        });
+        this.messages = data;
       });
   }
   subscribeToEvents(): void {
@@ -43,6 +39,4 @@ export class FeedComponent implements OnInit {
       });
     });
   }
-
-
 }

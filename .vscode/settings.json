@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "/subscriptions/213f6c5a-4775-4601-bb7d-ca32c1b36769/resourceGroups/schwarzesbrett333/providers/Microsoft.Web/sites/schwarzesbrett333",
+    "appService.deploySubpath": "schwarzesbrett333\\UI\\dist\\schwarzesBrett"
+}
