@@ -46,6 +46,7 @@ namespace Api
 
             var cbuilder = new ContainerBuilder();
             cbuilder.RegisterType<FeedPostDataRepository>().As<IFeedPostDataRepository>();
+            cbuilder.RegisterType<SpamCheck>().As<ISpamCheck>();
             cbuilder.Populate(services);
             return new AutofacServiceProvider(cbuilder.Build());
 

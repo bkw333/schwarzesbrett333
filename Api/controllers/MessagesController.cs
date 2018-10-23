@@ -12,15 +12,18 @@ namespace Api.controllers
     {
         private readonly IHubContext<MessageHub> _messageHubContext;
         private readonly IFeedPostDataRepository _repository;
+        private readonly ISpamCheck _spamCheck;
         private readonly MessageHub _messageHub = new MessageHub();
 
         public MessagesController(
             IHubContext<MessageHub> messageHubContext,
-            IFeedPostDataRepository repository
+            IFeedPostDataRepository repository,
+            ISpamCheck spamCheck
             )
         {
             _messageHubContext = messageHubContext;
             _repository = repository;
+            _spamCheck = spamCheck;
         }
 
         [HttpGet]
@@ -40,21 +43,26 @@ namespace Api.controllers
             {
                 Username = post.Username,
                 Message = post.Message,
-                Datum = DateTime.Now
+                Datum = DateTime.Now.AddHours(2)
             };
 
+            if (!await _spamCheck.IsSpam(sentMessage))
+            {
             await _repository.Add(sentMessage);
-            
-            try
-            {
-                await _messageHubContext.Clients.All.SendAsync("Send", sentMessage);
-            }
-            catch (Exception e)
-            {
-                Console.Write(e.ToString());
+
+                try
+                {
+                    await _messageHubContext.Clients.All.SendAsync("Send", sentMessage);
+                }
+                catch (Exception e)
+                {
+                    Console.Write(e.ToString());
+                }
+
+                return Ok(); 
             }
 
-            return Ok();
+            return StatusCode(429);
         }
 
        

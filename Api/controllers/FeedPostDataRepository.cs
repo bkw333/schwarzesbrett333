@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 
@@ -19,10 +20,19 @@ namespace Api.controllers
            await _context.AddAsync(p);
            await _context.SaveChangesAsync();
         }
+        
 
         public async Task<IEnumerable<Post>> GetAll()
         {
             return await _context.Posts.ToListAsync();
+        }
+
+        public async Task<Post> GetLast()
+        {
+            var allRecords = await _context.Posts.ToListAsync();
+            var lastRecord = allRecords.OrderByDescending(x => x.Datum).FirstOrDefault();
+            return lastRecord;
+
         }
     }
 
@@ -31,5 +41,7 @@ namespace Api.controllers
         Task<IEnumerable<Post>> GetAll();
 
         Task Add(Post p);
+
+        Task<Post> GetLast();
     }
 }
