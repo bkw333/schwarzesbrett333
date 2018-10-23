@@ -1,5 +1,6 @@
 import { Post } from './../services/post';
 import { Component, OnInit } from '@angular/core';
+import { map } from 'rxjs/operators'
 
 import { MessageService } from '../services/messages.service';
 import { MatSnackBar } from '@angular/material';
@@ -23,11 +24,30 @@ export class InputDialogComponent implements OnInit {
       post.username = this.username;
       post.message = this.message;
 
-      console.log('sent to messagesservice');
+
+      //if else => error
+
       this.messageService.post(post)
-        .subscribe(() => {
-          this.message = '';
+        .subscribe(x => {
+          this.snackBar.open('Nachricht wird gepostet', 'Good!', {
+            duration: 4000,
+            panelClass: ['snackbar-success']
+          });
+        }, err => {
+          console.error('err', err.status);
+          if (err.status === 429) {
+            this.snackBar.open('Do not spam, cheers!', 'OKAY!', {
+              duration: 4000,
+              panelClass: ['snackbar-failed']
+            });
+          } else {
+            this.snackBar.open(err.status + ': ' + err.statusText, 'DAMMIT!', {
+              duration: 4000,
+              panelClass: ['snackbar-failed']
+            });
+          }
         });
+
 
     } else {
       this.snackBar.open('Felder <Username> und <Message> dürfen nicht leer sein!', 'Dammit!', {
